@@ -1,0 +1,365 @@
+:root {
+    --color-primero: #000000;
+    --color-secundario: #eeff00;
+    --color-tercero: #FFF;
+    --color-sombra: rgba(0, 0, 0, 0.7);
+    --color-texto-primero: rgb(99, 103, 114);
+    --color-p:rgb(29, 41, 53);
+  }
+
+/*-----ESTILOS GENERALES--------------*/
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+h2,
+ul{
+    margin: 0;
+    padding: 0;  
+}
+
+
+
+
+
+
+
+/*-----MAQUETACIÓN PRINCIPAL CON GRID--------------*/
+
+.contiene_todo{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: "cabecera cabecera cabecera cabecera cabecera cabecera"
+                         "slider slider slider slider slider slider"
+                         
+}
+
+.header{
+    grid-area: cabecera;
+}
+
+.slider{
+    grid-area: slider;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* menu principal */
+
+.header{
+    width: 100%;
+    padding: 10px 15px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s ease;
+    background-color: var(--color-primero);
+}
+
+.bg-scroll{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.a_logo img{
+    width: 50px;
+    margin-left: 10px;
+}
+
+.button{
+    background:none;
+    border: none;
+}
+
+.burguer_menu{
+    color: var(--color-secundario);
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .5s ease;
+}
+
+.burguer_menu:hover{
+    background-color: var(--color-primero);
+    color: var(--color-tercero);
+    box-shadow: 0 0 5px var(--color-sombra);
+}
+
+.burguer-scroll{
+    color: #FFF;
+}
+
+.header_nav{
+    border-radius: 5px;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+    pointer-events: none; 
+    background-color: rgba(10, 10, 8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_nav.activado{
+    height: 42vh;
+    pointer-events: auto; 
+}
+
+.nav_ul{
+    list-style: none;
+    padding: 10px 0;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.nav-a{
+    text-decoration: none;
+    color: var(--color-tercero);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    transition: color .5s ease;
+}
+
+
+.nav-a:hover{
+    color: var(--color-primero);
+}
+
+.link-scroll{
+    color: var(--color-tercero);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* slider o portada */
+
+.slider{
+    width: 100%;
+    margin-top: 65px;
+    height: 50vh;
+    background-image: url("../images/prueba.jpeg");
+    background-color: #0f0f0f;
+    filter: brightness(1.2);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+.slider-bg{
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-titles h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-shadow: 0 0 5px black;
+}
+
+.slider-logo{
+    width: 80px;
+}
+
+.slider-titles h2{
+    text-align: center;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 0 0 10px black;
+    color: var(--color-tercero);
+    margin-bottom: 50px;
+}
+
+.slider-container-button{
+    display: flex;
+    gap: 10px;
+}
+
+.button-form,
+.slider-button{
+    width: 130px;
+    padding: 8px 0;
+    background: none;
+    border: 2px solid var(--color-tercero);
+    color: var(--color-tercero);
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.514) inset;
+    text-shadow: 0 0 10px black;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.mail-button{
+    background-color: var(--color-secundario);
+    color: #000000;
+}
+
+.whp-button{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #0db464;
+}
+
+.mail-button:hover{
+    background-color: var(--color-primero);
+    color: #eeff00;
+}
+
+.whp-button:hover{
+    background-color: #000000;
+    color: var(--color-secundario);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:760px){
+
+    .header{
+        height: max-content;
+        padding: 3px 3px;
+    }
+
+    .a_logo img{
+        width: 60px;
+        margin-left: 40px;
+    }
+
+    .button{
+        margin-right: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:970px){
+
+    .header_nav{
+        width: fit-content;
+        display: block;
+        height: 55px;
+        box-shadow: none;
+        pointer-events: all;
+        transition: none;
+        margin-right: 20px;
+        background: none;
+        overflow: visible;
+    }
+    .header_nav.activado{
+        flex-direction: row;
+        height: fit-content;
+    }
+
+    .nav_ul{
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+        /* background-color: var(--color-primero); */
+        background-color: transparent;
+        gap: 0;
+        padding: 0 30px;
+    } 
+    
+    .nav-a{
+        display: inline-block;
+        color: var(--color-texto-primero);
+        padding: 18px 15px;
+        font-weight: 400;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: all .4s ease;
+    }
+
+    .nav-a:hover{
+        color: var(--color-tercero);
+        background-color: var(--color-primero);
+        box-shadow: 4px 4px 7px var(--color-sombra);
+    }
+
+    .link-scroll{
+        color: #fff;
+    }
+}
