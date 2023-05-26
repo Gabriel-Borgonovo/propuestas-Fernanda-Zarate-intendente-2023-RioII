@@ -28,6 +28,10 @@ ul{
     padding: 0;  
 }
 
+body{
+    position: relative;
+}
+
 
 
 
@@ -315,7 +319,7 @@ ul{
 .h2-nosotros{
     padding-top: 60px;
     padding-bottom: 20px;
-    font-family: "Segoe UI", "Segoe WP", Arial, sans-serif;;
+    font-family: "Segoe UI", "Segoe WP", Arial, sans-serif;
 }
 
 .h2-nosotros-desktop{
@@ -367,26 +371,117 @@ ul{
 
 
 /**actividades*/
+.h2-actividades{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+
 .section-actividades{
-    display: flex;
-    flex-direction: column;
+    
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
 }
 
-.bg-mateada{
-    background-image: url('../assets/mateada.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
+h2 .h2-actividades{
+    text-align: center;
+
 }
 
-.h3-mateadas{
-    color: #fff;
+.mateada-cards{
+    width: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    grid-template-areas: "mateada mateada mateada mateada"
+                        "pastelitos pastelitos sectSur sectSur"
+                        "reunionone reunionone reunionone reunionone";
 }
+
+.article-mateada{
+    grid-area: mateada;
+}
+
+.article-25-mayo{
+    grid-area: pastelitos;
+}
+
+.article-sector-sur{
+    grid-area: sectSur;
+}
+
+.article-reunionone{
+    grid-area: reunionone;
+}
+
+.img-grid{
+    width: 100%;
+}
+
+.grilla-texts{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.grilla-texts h3{
+    color: #4b5158;
+    font-family: "Segoe UI", "Segoe WP", Arial, sans-serif;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.grilla-texts span{
+    color: #4b5158;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**aside redes*********/
+.aside{
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+    padding: 20px 5px;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.redes a i{
+    font-size: 35px;
+    color: #0f0f0f;
+}
+
+.redes a i:hover{
+    color: var(--color-primero);
+}
+
+
+
 
 
 
