@@ -43,6 +43,7 @@ ul{
     grid-template-areas: "cabecera cabecera cabecera cabecera cabecera cabecera"
                          "slider slider slider slider slider slider"
                          "about about about about about about"
+                         "footer footer footer footer footer footer"
                          
 }
 
@@ -56,6 +57,10 @@ ul{
 
 .aboutUs{
     grid-area: about;
+}
+
+.footer{
+    grid-area: footer;
 }
 
 
@@ -201,10 +206,10 @@ ul{
 .slider-bg{
     width: inherit;
     height: inherit;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 79%);display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -270,22 +275,6 @@ ul{
     color: #000000;
 }
 
-.whp-button{
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    background-color: #0db464;
-}
-
-.mail-button:hover{
-    background-color: var(--color-primero);
-    color: #eeff00;
-}
-
-.whp-button:hover{
-    background-color: #000000;
-    color: var(--color-secundario);
-}
 
 
 
@@ -319,8 +308,94 @@ ul{
 .p-nosotros{
     font-family: "Segoe UI", "Segoe WP", Arial, sans-serif;
     color: #0f0f0f;
-    font-size: 17px;
+    font-size: 18px;
 }
+
+.p-nosotros b{
+    background-color: #eeff00;
+}
+
+.text-nosotros{
+    position: relative;
+}
+
+.btn-show-more-text{
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+    border: none;
+    background-color:#0f0f0f;
+    color: var(--color-tercero);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.btn-show-more-text:hover{
+    color: #eeff00;
+}
+
+
+
+
+
+
+
+
+
+/*------------FOOTER-------------*/
+
+.footer{
+    background-color: var(--color-primero);
+    margin-top: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menciones_flaticon{
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    color: var(--color-tercero);
+    align-self: center;
+}
+
+/* logo whatsapp */
+
+.whatsapp_logo img{
+    width: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 999;
+    filter: saturate(2);
+    border: 3px solid var(--color-tercero);
+    border-radius: 100%;
+    animation-name: whatsapp;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: all .3s ease;
+}
+
+
+@keyframes whatsapp {
+    0%{
+        width: 50px;
+    }
+    50%{
+        width: 70px;
+        filter: saturate(4);
+        box-shadow: 0 10px 10px var(--color-sombra);
+    }
+    100%{
+        width: 50px;
+    }
+}
+
+
 
 
 
