@@ -42,6 +42,7 @@ ul{
     grid-template-columns: repeat(6,1fr);
     grid-template-areas: "cabecera cabecera cabecera cabecera cabecera cabecera"
                          "slider slider slider slider slider slider"
+                         "about about about about about about"
                          
 }
 
@@ -51,6 +52,10 @@ ul{
 
 .slider{
     grid-area: slider;
+}
+
+.aboutUs{
+    grid-area: about;
 }
 
 
@@ -73,6 +78,7 @@ ul{
     position: fixed;
     z-index: 10;
     top: 0;
+    /* height: 55px; */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -85,7 +91,7 @@ ul{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.a_logo img{
+.a_logo {
     width: 50px;
     margin-left: 10px;
 }
@@ -116,6 +122,7 @@ ul{
 
 .header_nav{
     border-radius: 5px;
+    height: 55px;
     width: 100%;
     height: 0;
     overflow: hidden;
@@ -148,6 +155,7 @@ ul{
 
 .nav-a{
     text-decoration: none;
+    font-family: "Segoe UI", "Segoe WP", Arial, sans-serif;;
     color: var(--color-tercero);
     font-weight: 400;
     font-size: 16px;
@@ -288,15 +296,51 @@ ul{
 
 
 
+/*Sobre nodotros*/
+
+.aboutUs{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-nosotros{
+    width: 100%;
+}
+
+.h2-nosotros{
+    font-family: "Segoe UI", "Segoe WP", Arial, sans-serif;;
+}
+
+.h2-nosotros-desktop{
+    display: none;
+}
+
+.p-nosotros{
+    font-family: "Segoe UI", "Segoe WP", Arial, sans-serif;
+    color: #0f0f0f;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
 @media screen and (min-width:760px){
 
     .header{
-        height: max-content;
         padding: 3px 3px;
+        height: 55px;
     }
+
 
     .a_logo img{
         width: 60px;
@@ -369,5 +413,9 @@ ul{
 
     .link-scroll{
         color: #fff;
+    }
+
+    .button{
+        display: none;
     }
 }
