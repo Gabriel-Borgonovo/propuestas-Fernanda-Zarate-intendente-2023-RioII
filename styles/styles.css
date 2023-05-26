@@ -43,6 +43,7 @@ ul{
     grid-template-areas: "cabecera cabecera cabecera cabecera cabecera cabecera"
                          "slider slider slider slider slider slider"
                          "about about about about about about"
+                         "actividades actividades actividades actividades actividades actividades"
                          "footer footer footer footer footer footer"
                          
 }
@@ -57,6 +58,10 @@ ul{
 
 .aboutUs{
     grid-area: about;
+}
+
+.section-actividades{
+    grid-area: actividades;
 }
 
 .footer{
@@ -97,8 +102,12 @@ ul{
 }
 
 .a_logo {
-    width: 50px;
+    /* width: 50px; */
     margin-left: 10px;
+}
+
+.a_logo .logo{
+    width: 120px;
 }
 
 .button{
@@ -288,16 +297,24 @@ ul{
 /*Sobre nodotros*/
 
 .aboutUs{
+    margin-bottom: 100px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-nosotros{
     width: 100%;
+    max-width: 600px;
 }
 
 .h2-nosotros{
+    padding-top: 60px;
+    padding-bottom: 20px;
     font-family: "Segoe UI", "Segoe WP", Arial, sans-serif;;
 }
 
@@ -319,10 +336,15 @@ ul{
     position: relative;
 }
 
+.full-text{
+    display: none;
+    transition: all .3s linear;
+}
+
 .btn-show-more-text{
     position: absolute;
     right: 10px;
-    bottom: -20px;
+    bottom: -30px;
     border: none;
     background-color:#0f0f0f;
     color: var(--color-tercero);
@@ -344,11 +366,47 @@ ul{
 
 
 
+/**actividades*/
+.section-actividades{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.bg-mateada{
+    background-image: url('../assets/mateada.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.h3-mateadas{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*------------FOOTER-------------*/
 
 .footer{
     background-color: var(--color-primero);
-    margin-top: 600px;
+    margin-top: 300px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -425,6 +483,11 @@ ul{
     .button{
         margin-right: 40px;
     }
+
+    /*sobre nosostros*/
+
+    
+
 }
 
 
