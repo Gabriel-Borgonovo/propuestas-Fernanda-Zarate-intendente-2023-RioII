@@ -6,8 +6,8 @@ const d = document;
 d.addEventListener('DOMContentLoaded', () => {
     showMenu();
     showMoreText();
-    renderList('../data/concejales.json');
-    renderList('../data/concejales.suplentes.json');
-    renderList('../data/tribunalesdecuentas.json');
-    renderList('../data/tribunalessuplentes.json');
+    renderList('./js/data/concejales.json');
+    renderList('./js/data/concejales.suplentes.json');
+    renderList('./js/data/tribunalesdecuentas.json');
+    renderList('./js/data/tribunalessuplentes.json');
 })
