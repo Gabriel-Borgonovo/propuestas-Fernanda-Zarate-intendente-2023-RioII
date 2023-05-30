@@ -8,6 +8,9 @@
      <!-- font awesome -->
      <script src="https://kit.fontawesome.com/5389a2bf4d.js" crossorigin="anonymous"></script>
 
+      <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
 </head>
@@ -34,14 +37,16 @@
     <section class="slider">
 
         <div class="slider-bg">
+            <a href="./propuestas.html" target="_blank" class="btn-propuestas">Propuestas</a>
             <article class="slider-titles">
                 <h1>Fernanda Zarate intendente 2023</h1>
                 <h2>"Honestidad, trabajo y transparencia"</h2>
+                
             </article>
         </div>
     </section>
 
-    <section class="aboutUs" id="nosotros">
+    <main class="aboutUs" id="nosotros">
         <h2 class="h2-nosotros">Sobre Nosotros</h2> 
         <img src="./assets/portada.jpg" alt="lista" title="lista" class="img-nosotros" />
         <article class="text-nosotros">
@@ -71,7 +76,7 @@
             </div> 
             <button class="btn-show-more-text"><i class="fa-solid fa-chevron-down"></i></button>
         </article> 
-    </section>
+    </main>
 
     <section class="section-actividades">
         <h2 class="h2-actividades">Actividades que venimos realizando</h2>
@@ -110,6 +115,49 @@
         </div>
     </section>
 
+    <section class="section-lista">
+        <h2 class="h2-lista">Integrantes de la Lista</h2>
+        <article class="principales-candidatos">
+            
+            <div>
+                <img src="https://w7.pngwing.com/pngs/915/511/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png" alt="fernanda zarate" class="img-candidato"/>
+                <div class="contiene-textos-principales">
+                    <h3>Fernanda Zarate</h3>
+                    <p><b>Ocupación: </b> <span>Doctora</span></p>
+                    <p><b>Cargo: </b> <span>Intendente</span></p>
+                    <p><b>Descripción: </b> <span>Mi deseo es un mejor Río Segundo</span></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://w7.pngwing.com/pngs/915/511/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png" alt="fernanda zarate" class="img-candidato"/>
+                <div class="contiene-textos-principales">
+                    <h3>German Mola</h3>
+                    <p><b>Ocupación: </b> <span>Agente inmobiliario</span></p>
+                    <p><b>Cargo: </b> <span>1er Concejal</span></p>
+                    <p><b>Descripción: </b> <span>Mi deseo es un mejor Río Segundo</span></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="https://w7.pngwing.com/pngs/915/511/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png" alt="fernanda zarate" class="img-candidato"/>
+                <div class="contiene-textos-principales">
+                    <h3>María Amelia Amengual</h3>
+                    <p><b>Ocupación: </b> <span>Empleada del Poder Judicial</span></p>
+                    <p><b>Cargo: </b> <span>2da Concejal</span></p>
+                    <p><b>Descripción: </b> <span>Mi deseo es un mejor Río Segundo</span></p>
+                </div>
+            </div>
+            
+            
+        </article>
+        <article class="container">
+            
+            <div class="row margin-top" id="lista"></div>
+        </article>
+        
+    </section>
+
 
     <footer class="footer">
         <a href="https://wa.link/0v9qd3" class="whatsapp_logo" target="__BLANK">
@@ -126,6 +174,22 @@
             <a href="https://instagram.com/fernanda.zarate.2023?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
         </div>  
     </aside>
+
+     <!-- *********TEMPLATES****************** -->
+
+    <!-- Creamos la templete para las cards que contienen los productos -->
+    <template id="template-elementos">
+        <div class="col-6 col-lg-4 col-xl-4 contiene-imagen">
+            <img src="..." alt="..." title="..." />
+            <div class="contiene-textos">
+                <h3>Producto</h3>
+                <p><b>Ocupación: </b> <span class="ocupation"></span></p>
+                <p><b>Cargo: </b> <span class="cargo"></span></p>
+                <p><b>Descripción: </b> <span class="description"></span></p>
+            </div>
+        </div>
+
+    </template>
 
     <script src="./js/index.js" type="module"></script>
 </body>

@@ -48,6 +48,7 @@ body{
                          "slider slider slider slider slider slider"
                          "about about about about about about"
                          "actividades actividades actividades actividades actividades actividades"
+                         "lista lista lista lista lista lista"
                          "footer footer footer footer footer footer"
                          
 }
@@ -66,6 +67,10 @@ body{
 
 .section-actividades{
     grid-area: actividades;
+}
+
+.section-lista{
+    grid-area: lista;
 }
 
 .footer{
@@ -217,6 +222,7 @@ body{
 }
 
 .slider-bg{
+    display: flex;
     width: inherit;
     height: inherit;
     background: rgb(0,0,0);
@@ -263,29 +269,25 @@ body{
     margin-bottom: 50px;
 }
 
-.slider-container-button{
-    display: flex;
-    gap: 10px;
-}
-
-.button-form,
-.slider-button{
-    width: 130px;
-    padding: 8px 0;
-    background: none;
-    border: 2px solid var(--color-tercero);
-    color: var(--color-tercero);
-    font-size: 18px;
+.btn-propuestas{
+    color: #FFF;
+    text-decoration: none;
+    align-self: center;
+    margin-bottom: 250px;
+    font-size: 20px;
+    padding: 7px 20px;
+    border: 2px solid #FFF;
     border-radius: 10px;
-    box-shadow: 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.514) inset;
-    text-shadow: 0 0 10px black;
     cursor: pointer;
-    transition: all .3s ease;
+    background-color: #0f0f0f7a;
+    box-shadow: 0 2 10px black;
+    transition: all .3s linear;
 }
 
-.mail-button{
-    background-color: var(--color-secundario);
-    color: #000000;
+.btn-propuestas:hover{
+    background-color: #eeff00;
+    color:#0f0f0f;
+    border-color: #0f0f0f;
 }
 
 
@@ -491,6 +493,109 @@ h2 .h2-actividades{
 
 
 
+/***Lista*/
+.section-lista{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h2-lista{
+    padding-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #4b5158;
+    font-family: "Segoe UI", "Segoe WP", Arial, sans-serif;
+}
+
+.principales-candidatos{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    gap: 25px;
+}
+
+
+.img-candidato{
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.contiene-textos-principales{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contiene-textos-principales p{
+    margin: 0;
+    padding: 0;
+}
+
+.list-title{
+    text-align: center;
+    margin: 20px 0;
+    font-family: "Segoe UI", "Segoe WP", Arial, sans-serif;
+}
+
+
+
+/* cards */
+.margin-top{
+    margin-top: 100px;
+ }
+
+.contiene-imagen{
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+ }
+
+ .contiene-imagen img{
+    width: 100%;
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+ }
+
+ .contiene-textos{
+    color: var(--color-primero);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+ }
+
+ .principales-candidatos{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .contiene-textos h3{
+    font-size: 20px;
+ }
+
+ .contiene-textos p{
+    padding: 0;
+    margin: 0;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -650,5 +755,11 @@ h2 .h2-actividades{
 
     .button{
         display: none;
+    }
+
+    .principales-candidatos{
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: center;
     }
 }
