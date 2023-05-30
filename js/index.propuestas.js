@@ -9,4 +9,5 @@ d.addEventListener('DOMContentLoaded', () => {
     showMenu();
     showMoreText();
     renderPropuestas('./js/propuestas/seguridad.json');
+    renderPropuestas('./js/propuestas/salud.json');
 });

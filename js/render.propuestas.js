@@ -13,6 +13,7 @@ const pintarPropuestas = (data) => {
 
     const $img = d.createElement('img');
     $img.setAttribute("src", data.img);
+    $img.classList.add("img-propuestas")
     $fragment.appendChild($img)
 
     data.propuestas.forEach(elemento => {
