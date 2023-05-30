@@ -1,28 +1,14 @@
 const d = document
 
-export default async function renderList(path) {
-    try {
-        const response = await fetch(path);
-        const data = await response.json();
-
-        
-        pintarelementos(data);
-        
-    } catch (error) {
-        console.log(error);
-    }
-    
-}
-
 const pintarelementos = (data) => {
     const $template = d.getElementById("template-elementos").content,
         $fragment = d.createDocumentFragment(),
         $contieneLista = d.getElementById("lista");
         
-    console.log('data', data.title);
+    //console.log('data lista', data.title);
     const $listTitle = d.createElement('h2');
-    $listTitle.innerHTML = data.title
-    $listTitle.classList.add("list-title")
+    $listTitle.innerHTML = data.title;
+    $listTitle.classList.add('list-title')
     $fragment.appendChild($listTitle)
 
     data.data.forEach(elemento => {
@@ -42,3 +28,23 @@ const pintarelementos = (data) => {
 
     $contieneLista.appendChild($fragment);
 }
+
+
+
+
+
+
+export default async function renderList(path) {
+    try {
+        const response = await fetch(path);
+        const data = await response.json();
+
+        
+        pintarelementos(data);
+        
+    } catch (error) {
+        console.log(error);
+    }
+    
+}
+

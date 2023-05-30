@@ -666,6 +666,43 @@ h2 .h2-actividades{
 
 
 
+/**PÁGINATA DE PROPUESTAS*/
+.contiene-propuestas{
+    width: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    grid-template-areas: "headerpro headerpro headerpro headerpro"
+                         "protitles protitles protitles protitles"
+                         "propuestas propuestas propuestas propuestas";
+}
+
+.prop-header{
+    grid-area: headerpro;
+}
+
+.propuestas-titles{
+    grid-area: protitles;
+}
+
+.h1-propuestas{
+    color: #0f0f0f;
+    margin-top: 100px;
+}
+
+.propuestas-main{
+    grid-area: propuestas;
+}
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width:760px){
 
@@ -761,5 +798,13 @@ h2 .h2-actividades{
         flex-direction: row;
         align-items: baseline;
         justify-content: center;
+    }
+
+    .slider{
+        height: 100vh;
+    }
+
+    .btn-propuestas{
+        margin-bottom: 100px;
     }
 }

@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- font awesome -->
+     <script src="https://kit.fontawesome.com/5389a2bf4d.js" crossorigin="anonymous"></script>
+
+     <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Propuestas</h1>
+    <div class="contiene-propuestas">
+        <header class="header prop-header">
+            <a class="a_logo" href="index.html"><img src="./assets/logo.jpg" alt="logo" title="logo" class="logo" /></a>
+    
+            <button class="button" id="burguer">
+                <i class="fa-solid fa-bars burguer_menu"></i>
+            </button>
+    
+            <nav class="header_nav">
+                <ul class="nav_ul">
+                    <li class="nav_ul_li"><a class="nav-a" href="#">Inicio</a></li>
+                    <li class="nav_ul_li"><a class="nav-a" href="index.html#nosotros">Nosotros</a></li>
+                    <li class="nav_ul_li"><a class="nav-a" href="#">Propuestas</a></li>
+                    <li class="nav_ul_li"><a class="nav-a" href="#">Lista</a></li>
+                    <li class="nav_ul_li"><a class="nav-a" href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="propuestas-titles">
+            <h1 class="h1-propuestas">Propuestas</h1>
+        </div>
+
+        <main class="propuestas-main">
+            <article class="container">
+            
+                <div class="row margin-top" id="propuestas"></div>
+            </article>
+        </main>
+        
+    </div>
+    
+    <!-- template -->
+    <template id="template-propuestas">
+        <div class="propuestas-container">
+            <p class="prop-p">propuestas</p>
+        </div>
+
+    </template>
+    <script src="./js/index.propuestas.js" type="module"></script>
 </body>
 </html>
