@@ -18,11 +18,11 @@ d.addEventListener('DOMContentLoaded', () => {
     await renderPropuestas('./js/propuestas/laboral.json');
     await renderPropuestas('./js/propuestas/salud.json');
     await renderPropuestas('./js/propuestas/seguridad.json');
-    await renderPropuestas('/js/propuestas/servicios.json');
-    await renderPropuestas('/js/propuestas/transparencia.json');
-    await renderPropuestas('/js/propuestas/urbanizacion.json');
-    await renderPropuestas('/js/propuestas/carta.json');
-    await renderPropuestas('/js/propuestas/juventud.json');
+    await renderPropuestas('./js/propuestas/servicios.json');
+    await renderPropuestas('./js/propuestas/transparencia.json');
+    await renderPropuestas('./js/propuestas/urbanizacion.json');
+    await renderPropuestas('./js/propuestas/carta.json');
+    await renderPropuestas('./js/propuestas/juventud.json');
     }
 
     render();
