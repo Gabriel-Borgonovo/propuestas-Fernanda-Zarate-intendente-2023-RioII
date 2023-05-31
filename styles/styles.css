@@ -668,9 +668,7 @@ h2 .h2-actividades{
 
 /**PÁGINATA DE PROPUESTAS*/
 .contiene-propuestas{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     display: grid;
     position: relative;
     grid-template-columns: repeat(4,1fr);
@@ -699,9 +697,31 @@ h2 .h2-actividades{
     grid-area: propuestas;
 }
 
-/* .container-all-propuestas{
-   background-color: #eeff00;
-} */
+.container-all-propuestas{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.prop-h2{
+    text-align: center;
+    align-self: center;
+}
+
+.prop-texts{
+    width: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.prop-p{
+    margin: 0;
+}
 
 .propuestas-todas{
     display: flex;
@@ -715,6 +735,7 @@ h2 .h2-actividades{
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    align-self: center;
 }
 
 
