@@ -8,8 +8,14 @@ const d = document;
 d.addEventListener('DOMContentLoaded', () => {
     showMenu();
     showMoreText();
-    renderList('./js/data/concejales.json');
-    renderList('./js/data/concejales.suplentes.json');
-    renderList('./js/data/tribunalesdecuentas.json');
-    renderList('./js/data/tribunalessuplentes.json');
+
+    async function render(){
+        await renderList('./js/data/concejales.json');
+        await renderList('./js/data/concejales.suplentes.json');
+        await renderList('./js/data/tribunalesdecuentas.json');
+        await renderList('./js/data/tribunalessuplentes.json');  
+    }
+
+    render();
+    
 });

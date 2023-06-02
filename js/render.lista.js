@@ -18,8 +18,7 @@ const pintarelementos = (data) => {
         $template.querySelector("img").setAttribute('title', elemento.fullName);
         $template.querySelector("h3").textContent = elemento.fullName;
         $template.querySelector(".ocupation").textContent = elemento.profession;
-        $template.querySelector(".cargo").textContent = elemento.position;
-        $template.querySelector(".description").textContent = elemento.description;
+        
 
         const clone = $template.cloneNode(true);
         $fragment.appendChild(clone);
